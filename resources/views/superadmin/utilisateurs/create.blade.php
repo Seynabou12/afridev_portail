@@ -112,7 +112,6 @@
                                                                 <option value="{{ $profile->id }}">{{ $profile->name }}
                                                                 </option>
                                                             @endforeach
-
                                                         </select>
 
                                                     </div>

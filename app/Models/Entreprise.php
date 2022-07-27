@@ -11,6 +11,6 @@ class Entreprise extends Model
     protected $table = 'entreprises';
     protected $primarykey = 'id'; 
     protected $fillable = [
-        'name', 'email', 'secteur', 'telephone',
+        'name', 'email', 'secteur', 'telephone', 'profile_id',
     ];
 }
