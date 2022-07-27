@@ -44,7 +44,7 @@
                                                 <td>{{ $entreprise->telephone }}</td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="{{ route('superadmin.entreprises.edit', $->id) }}"
+                                                        <a href="{{ route('superadmin.entreprises.edit', $entreprise->id) }}"
                                                             class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                                 class="fas fa-pencil-alt"></i></a>
                                                         <form action="{{ route('superadmin.entreprises.destroy', $entreprise->id) }}"

@@ -51,8 +51,8 @@
                     <span class="nav-text">Users</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="#">Ajout User</a></li>
-                    <li><a href="#">Liste Users</a></li>
+                    <li><a href="{{ route('utilisateurs.create') }}">Ajout User</a></li>
+                    <li><a href="{{ route('utilisateurs.index')}}">Liste Users</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
