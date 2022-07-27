@@ -28,14 +28,15 @@
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" method="POST" action="{{ route('superadmin.utilisateurs.store') }}"
-                                    enctype="multipart/form-data">
+                                <form class="needs-validation" novalidate="" method="POST"
+                                    action="{{ route('superadmin.utilisateurs.store') }}" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Nom Utilisateur
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Nom
+                                                        Utilisateur
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-8">
@@ -50,7 +51,8 @@
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Email Entreprise
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Email
+                                                        Entreprise
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-8">
@@ -67,7 +69,8 @@
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Mot de Passe
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Mot de
+                                                        Passe
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-8">
@@ -80,6 +83,42 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            {{-- <div class="col-xl-6">
+                                                <div class="mb-5 row">
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Profile
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-8">
+                                                        <select name="role" id="">
+                                                            @foreach ($profiles as $profile)
+                                                                <option value="{{ $profile->id }}">{{ $profile->name }}
+                                                                </option>
+                                                            @endforeach
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div> --}}
+                                            <div class="col-xl-6">
+                                                <div class="mb-5 row">
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom05">Profiles
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-8">
+                                                        <select class="default-select wide form-control"
+                                                            id="validationCustom05" style="display: none;">
+                                                            <option data-display="Select">Seclectionner un profile</option>
+                                                            @foreach ($profiles as $profile)
+                                                                <option value="{{ $profile->id }}">{{ $profile->name }}
+                                                                </option>
+                                                            @endforeach
+
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="mb-3 row">

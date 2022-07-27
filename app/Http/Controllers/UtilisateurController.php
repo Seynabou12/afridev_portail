@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,8 @@ class UtilisateurController extends Controller
 
     public function create()
     {
-        return view('superadmin.utilisateurs.create');
+        $profiles=Profile::all();
+        return view('superadmin.utilisateurs.create', compact('profiles'));
     }
 
     public function store(Request $request)

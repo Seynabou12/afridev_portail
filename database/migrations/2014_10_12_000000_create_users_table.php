@@ -23,11 +23,9 @@ return new class extends Migration
                 $table->rememberToken();
                 $table->integer('profile_id')->unsigned();
                 $table->foreign('profile_id')->references('id')->on('profiles')->onDelete('cascade');
-                
                 $table->timestamps();
             });
         }
-       
     }
 
     /**
