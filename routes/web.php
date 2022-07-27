@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 Route::resource('/entreprises', EntrepriseController::class);
 Route::post('/entreprises/create', [EntrepriseController::class, 'store'])->name('superadmin.entreprises.store');
+Route::post('/entreprises/edit/{$id}', [EntrepriseController::class, 'edit'])->name('superadmin.entreprises.edit');
+Route::post('/entreprises/destroy/{$id}', [EntrepriseController::class, 'destroy'])->name('superadmin.entreprises.destroy');

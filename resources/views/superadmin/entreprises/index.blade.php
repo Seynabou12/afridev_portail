@@ -44,17 +44,17 @@
                                                 <td>{{ $entreprise->telephone }}</td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a> 
-
-                                                        <a href="#" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
-                                                        {{-- <form action="{{ route('superAdmin.comptes.destroy', $nt->id) }}"
+                                                        <a href="{{ route('superadmin.entreprises.edit', $->id) }}"
+                                                            class="btn btn-primary shadow btn-xs sharp me-1"><i
+                                                                class="fas fa-pencil-alt"></i></a>
+                                                        <form action="{{ route('superadmin.entreprises.destroy', $entreprise->id) }}"
                                                             method="POST"
                                                             onsubmit="return confirm('Voulez-vous vraiment supprimer')">
                                                             @csrf
                                                             @method('delete')
                                                             <button type="submit" class="btn btn-danger shadow btn-xs sharp"><i
                                                             class="fa fa-trash"></i></button>
-                                                        </form> --}}
+                                                        </form>
                                                     </div>
                                                 </td>
                                             </tr>
