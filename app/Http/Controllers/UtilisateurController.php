@@ -23,7 +23,7 @@ class UtilisateurController extends Controller
     {
         $input = $request->all();
         User::create($input);
-        return redirect('/utilisateurs')->with('flash-message', 'Votre l\'utilisater a été bien enregistré');
+        return redirect('/utilisateurs')->with('flash-message', 'Votre l\'utilisater  été bien enregistré');
     }
     
 }

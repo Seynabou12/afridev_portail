@@ -27,11 +27,12 @@ class EntrepriseController extends Controller
     }
     public function show()
     {
-
+        
     }
 
     public function edit($id)
     {
+
         $entreprise = Entreprise::find($id);
         return view('superadmin.entreprises.edit')->with('entreprise', $entreprise);
     }
@@ -41,7 +42,7 @@ class EntrepriseController extends Controller
         $entreprise = Entreprise::find($id);
         $input = $request->all();
         $entreprise->update($input);
-        return redirect('/entreprises')->with('flash-message', 'Vos modifications ont été bien enregistré');
+        return redirect('superadmin/entreprises')->with('flash-message', 'Vos modifications ont été bien enregistré');
     }
 
     public function destroy(Entreprise $entreprise)

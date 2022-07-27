@@ -96,7 +96,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
                                         <div class="col-xl-6">
                                             <div class="mb-3 row">
                                                 <div class="col-lg-8 ms-auto">

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EntrepriseController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,7 @@ Route::post('/entreprises/destroy/{$id}', [EntrepriseController::class, 'destroy
 
 Route::resource('/utilisateurs', UtilisateurController::class);
 Route::post('/utilisateurs/create', [UtilisateurController::class, 'store'])->name('superadmin.utilisateurs.store');
+
+
+Route::resource('/profiles', ProfileController::class);
+Route::post('/profiles/create', [ProfileController::class, 'store'])->name('profiles.store');
