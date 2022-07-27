@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EntrepriseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.base');
+    return view('welcome');
 });
+
+Route::resource('/entreprises', EntrepriseController::class);
+Route::post('/entreprises/create', [EntrepriseController::class, 'store'])->name('superadmin.entreprises.store');
