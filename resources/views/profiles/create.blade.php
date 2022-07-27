@@ -43,7 +43,7 @@
                                                         placeholder="Enter le nom du profile." required=""
                                                         name="name">
                                                     <div class="invalid-feedback">
-                                                        entrer le nom .
+                                                        entrer le nom
                                                     </div>
                                                 </div>
                                             </div>

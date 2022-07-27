@@ -1,9 +1,6 @@
 <div class="nav-header">
-    <a href="index.html" class="brand-logo">
-
-        <img src="/images/" alt="" srcset="" width="70" height="60"   class="">
-        
-     
+    <a href="#" class="brand-logo">
+        <img src="/images/images.jpeg" alt="" srcset="" width="70" height="60" class="">
     </a>
     <div class="nav-control">
         <div class="hamburger">
@@ -29,13 +26,14 @@
                                         class="flaticon-381-search-2"></i></a></span>
                         </div>
                     </li>
-                    
                     <li class="nav-item">
-                        <a href="javascript:void(0);" class="btn  d-sm-inline-block d-none" style="background-color: #fd7e14; color: white;">Portail Captif<i class="las la-signal ms-3 scale5"></i></a>
+                        <a href="javascript:void(0);" class="btn  d-sm-inline-block d-none"
+                            style="background-color: #fd7e14; color: white;">Portail Captif<i
+                                class="las la-signal ms-3 scale5"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
         </nav>
-      
     </div>
 </div>

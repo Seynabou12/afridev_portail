@@ -41,28 +41,41 @@
                     </a>
                 </div>
             </li>
-            <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
+            <li><a href="#" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-013-checkmark"></i>
                     <span class="nav-text">Dashbord</span>
                 </a>
             </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-050-info"></i>
-                    <span class="nav-text">Users</span>
+            @auth
+
+                @if (Auth::user()->profile->name == 'admin')
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-050-info"></i>
+                            <span class="nav-text">Users</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('utilisateurs.create') }}">Ajout User</a></li>
+                            <li><a href="{{ route('utilisateurs.index') }}">Liste Users</a></li>
+                        </ul>
+                    </li>
+                @endif
+
+                @if (Auth::user()->profile->name == 'super admin')
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-050-info"></i>
+                            <span class="nav-text">Entreprises</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('entreprises.create') }}">Ajout Entreprise</a></li>
+                            <li><a href="{{ route('entreprises.index') }}">Liste Entreprises</a></li>
+                        </ul>
+                    </li>
+                @endif
+            @endauth
+            <li class=""><a href="{{ route('profiles.create') }}" class="ai-icon mm-active" aria-expanded="false">
+                    <i class="flaticon-013-checkmark"></i>
+                    <span class="nav-text">Ajout de Profil</span>
                 </a>
-                <ul aria-expanded="false">
-                    <li><a href="{{ route('utilisateurs.create') }}">Ajout User</a></li>
-                    <li><a href="{{ route('utilisateurs.index')}}">Liste Users</a></li>
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-050-info"></i>
-                    <span class="nav-text">Entreprises</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="{{ route('entreprises.create') }}">Ajout Entreprise</a></li>
-                    <li><a href="{{ route('entreprises.index')}}">Liste Entreprises</a></li>
-                </ul>
             </li>
             {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-022-copy"></i>
@@ -81,8 +94,5 @@
                 </ul>
             </li> --}}
         </ul>
-
-
     </div>
-
 </div>

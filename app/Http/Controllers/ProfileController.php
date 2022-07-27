@@ -21,6 +21,6 @@ class ProfileController extends Controller
     {
         $input = $request->all();
         Profile::create($input);
-        return redirect('/profiles')->with('flash-message', 'Votre le profiles  été bien enregistré');
+        return redirect('/utilisateurs/create')->with('flash-message', 'Votre le profiles  été bien enregistré');
     }
 }

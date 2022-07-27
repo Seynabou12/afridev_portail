@@ -35,23 +35,7 @@
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Nom
-                                                        Utilisateur
-                                                        <span class="text-danger">*</span>
-                                                    </label>
-                                                    <div class="col-lg-8">
-                                                        <input type="text" class="form-control" id="validationCustom01"
-                                                            placeholder="Enter le nom entreprise." required=""
-                                                            name="name">
-                                                        <div class="invalid-feedback">
-                                                            entrer le nom .
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Email
+                                                    <label class="col-lg-4 col-form-label h2" for="validationCustom01">Email
                                                         Entreprise
                                                         <span class="text-danger">*</span>
                                                     </label>
@@ -65,11 +49,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Mot de
+                                                    <label class="col-lg-4 col-form-label h2" for="validationCustom01">Mot
+                                                        de
                                                         Passe
                                                         <span class="text-danger">*</span>
                                                     </label>
@@ -83,41 +66,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            {{-- <div class="col-xl-6">
-                                                <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Profile
-                                                        <span class="text-danger">*</span>
-                                                    </label>
-                                                    <div class="col-lg-8">
-                                                        <select name="role" id="">
-                                                            @foreach ($profiles as $profile)
-                                                                <option value="{{ $profile->id }}">{{ $profile->name }}
-                                                                </option>
-                                                            @endforeach
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div> --}}
-                                            <div class="col-xl-6">
-                                                <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom05">Profiles
-                                                        <span class="text-danger">*</span>
-                                                    </label>
-                                                    <div class="col-lg-8">
-                                                        <select class="default-select wide form-control"
-                                                            id="validationCustom05" style="display: none;">
-                                                            <option data-display="Select">Seclectionner un profile</option>
-                                                            @foreach ($profiles as $profile)
-                                                                <option value="{{ $profile->id }}">{{ $profile->name }}
-                                                                </option>
-                                                            @endforeach
-                                                        </select>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="mb-3 row">

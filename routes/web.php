@@ -20,14 +20,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/entreprises', EntrepriseController::class);
-Route::post('/entreprises/create', [EntrepriseController::class, 'store'])->name('superadmin.entreprises.store');
-Route::post('/entreprises/edit/{$id}', [EntrepriseController::class, 'edit'])->name('superadmin.entreprises.edit');
-Route::post('/entreprises/destroy/{$id}', [EntrepriseController::class, 'destroy'])->name('superadmin.entreprises.destroy');
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
 
-Route::resource('/utilisateurs', UtilisateurController::class);
-Route::post('/utilisateurs/create', [UtilisateurController::class, 'store'])->name('superadmin.utilisateurs.store');
+Route::post('/login',[UtilisateurController::class,'login']);
+
+Route::middleware('authentification')->group(
+    function () {
+        Route::resource('/entreprises', EntrepriseController::class);
+        Route::post('/entreprises/create', [EntrepriseController::class, 'store'])->name('superadmin.entreprises.store');
+        Route::post('/entreprises/edit/{$id}', [EntrepriseController::class, 'edit'])->name('superadmin.entreprises.edit');
+        Route::post('/entreprises/destroy/{$id}', [EntrepriseController::class, 'destroy'])->name('superadmin.entreprises.destroy');
+
+        Route::resource('/utilisateurs', UtilisateurController::class);
+        Route::post('/utilisateurs/create', [UtilisateurController::class, 'store'])->name('superadmin.utilisateurs.store');
 
 
-Route::resource('/profiles', ProfileController::class);
-Route::post('/profiles/create', [ProfileController::class, 'store'])->name('profiles.store');
+        Route::resource('/profiles', ProfileController::class);
+        Route::post('/profiles/create', [ProfileController::class, 'store'])->name('profiles.store');
+    }
+);

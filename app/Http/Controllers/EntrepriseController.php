@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Entreprise;
+use App\Models\Profile;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class EntrepriseController extends Controller
@@ -22,7 +24,20 @@ class EntrepriseController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        Entreprise::create($input);
+        $entreprise = Entreprise::create([
+            'name' => $request->name,
+            'adresse' => $request->adresse,
+            'secteur' => $request->secteur,
+            'telephone' => $request->telephone,
+        ]);
+
+        User::create([
+            'email'=>$request->email,
+            'password'=>$request->password,
+            'entreprise_id'=>$entreprise->id,
+            'profile_id'=> Profile::where('name', 'admin')->get()->first()->id
+        ]);
+        
         return redirect('/entreprises')->with('flash-message', 'Votre entrprise à été bien enregistré');
     }
     public function show()

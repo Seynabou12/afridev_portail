@@ -28,14 +28,15 @@
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" method="POST" action="{{ route('superadmin.entreprises.store') }}"
-                                    enctype="multipart/form-data">
+                                <form class="needs-validation" novalidate="" method="POST"
+                                    action="{{ route('superadmin.entreprises.store') }}" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Nom Entreprise
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Nom
+                                                        Entreprise
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-8">
@@ -50,15 +51,16 @@
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Email Entreprise
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Email
+                                                        Entreprise
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-8">
-                                                        <input type="email" class="form-control" id="validationCustom01"
-                                                            placeholder="Enter le nom entreprise." required=""
-                                                            name="email">
+                                                        <input type="text" class="form-control" id="validationCustom01"
+                                                            placeholder="Enter l'adresse entreprise." required=""
+                                                            name="adresse">
                                                         <div class="invalid-feedback">
-                                                            entrer le email .
+                                                            entrer l'adresse .
                                                         </div>
                                                     </div>
                                                 </div>
@@ -67,7 +69,8 @@
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Secteur Entreprise
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Secteur
+                                                        Entreprise
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-8">
@@ -82,13 +85,47 @@
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="mb-5 row">
-                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Telephone Entreprise
+                                                    <label class="col-lg-4 col-form-label"
+                                                        for="validationCustom01">Telephone Entreprise
                                                         <span class="text-danger">*</span>
                                                     </label>
                                                     <div class="col-lg-8">
                                                         <input type="text" class="form-control" id="validationCustom01"
                                                             placeholder="Enter le nom entreprise." required=""
                                                             name="telephone">
+                                                        <div class="invalid-feedback">
+                                                            entrer le telephone .
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="mb-5 row">
+                                                    <label class="col-lg-4 col-form-label" for="validationCustom01">Email Administrateur
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-8">
+                                                        <input type="eemail" class="form-control" id="validationCustom01"
+                                                            placeholder="Enter l'email de l'administrateur" required=""
+                                                            name="email">
+                                                        <div class="invalid-feedback">
+                                                            entrer l'email de l'administrateur .
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="mb-5 row">
+                                                    <label class="col-lg-4 col-form-label"
+                                                        for="validationCustom01">Mot de passe de l'administrateur
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-8">
+                                                        <input type="password" class="form-control" id="validationCustom01"
+                                                            placeholder="Enter le mot de passe de l'administrateur." required=""
+                                                            name="password">
                                                         <div class="invalid-feedback">
                                                             entrer le telephone .
                                                         </div>
