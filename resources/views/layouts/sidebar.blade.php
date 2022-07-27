@@ -57,11 +57,11 @@
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-050-info"></i>
-                    <span class="nav-text">Comptes</span>
+                    <span class="nav-text">Entreprises</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="#">Ajout Compte</a></li>
-                    <li><a href="#">Liste Comptes</a></li>
+                    <li><a href="#">Ajout Entreprise</a></li>
+                    <li><a href="#">Liste Entreprises</a></li>
                 </ul>
             </li>
             {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
